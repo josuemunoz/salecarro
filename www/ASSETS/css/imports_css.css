@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+.font, .box, .list{ font-family:sans-serif; font-size:16px; color:#333; line-height:19px;}
+.box{ width:100%; margin-top:20px !important; border-radius:10px; height:auto; float:left; margin:auto; background:#FFF;}
+
+.box p{ padding:5px 10px;}
+.headerTitle{ width:100%; height:auto; padding:5px 0; text-align:center; font-size:1.3em; color:#666; background-color:#fff; border-radius:5px; margin-bottom:10px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; text-shadow:1px 2px 2px #FFFFFF;}
+.h{ width:100%; height:104px; :left; text-align:center;}
+h2{ line-height:40px; font-family:sans-serif; font-size:1.5em; padding-left:10px;}
+
+button{ width:50% !important; height:auto; padding:3px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:1em; color:#000;}
+/*
+#edit, #delete, #addPictures, #sold, #test{ background: none repeat scroll 0 0 #FFFFFF;
+    
+   
+    float: left;
+    line-height: 20px;
+    position: relative;
+    right: 0;
+    text-align: left;
+     height:20px;
+    width: 100%;}
+*/
+
+.list{ width:100%; height:auto; float:left; margin:auto; font-size:18px;}
+.list ul, .list li{ padding:0px; margin:0px; text-align:center;}
+.list li{ width:100%; height:auto; margin:10px 0; list-style-type:none; background-color:#CCC; text-align:left; text-indent:20px; padding:5px 0px;}
+
+.makes{ width:100%; height:auto; float:left; margin-top:20px !important; font-size:1.4em; }
+.makes ul, .makes li{ padding:0px; margin:0px; text-align:center;}
+.makes li{ width:100%; height:auto; margin:0; list-style-type:none; background-color:#f2f2f2; color:#147ca6; text-align:left; text-indent:10px; padding:5px 0px; list-style:none;}
+.makes li:nth-child(even){ background-color:#a7cbd9; color:#f2f2f2; text-shadow:1px 0px 1px #147CA6;}
+.makes li:first-child{ border-radius:10px 10px 0 0;}
+.makes li:last-child{ border-radius:0 0 10px 10px;}
+.makes a{ text-decoration:none; list-style:none; list-style-type:none; display:block; color:inherit;}
+.makes a:hover{color:inherit;}
+.makes a:visited{ color:inherit;}
+
+h1{ color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+    left: 5px;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align: left;
+    text-decoration: none; top:10px;
+	text-shadow:0px 1px 2px #FFFFFF;
+    }
+h5{color: #000000;
+    font-size: .9em;
+    font-weight: normal;
+    line-height: 20px;
+    padding-left: 0px;
+    padding-top: 0;
+    text-decoration: none; position:absolute; left:140px; margin:0px; top:30px; text-align:left;}
+
+.makes span{ float:right; padding-right:10px;}
+/*using for media queries*/
+.myTarget{ width:100%; height:auto; float:left; margin-top:20px; margin-bottom:40px; padding:0px;}
+.myTarget ul, .myTarget li{ padding:0px; margin:0px;}
+.myTarget li{width:100%; height:auto; float:left; border-bottom:1px solid #333333;  border-top:1px solid #FFF; padding:0px; color:#FFFFFF; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; list-style:none; position:relative; background-color:#f2f2f2; padding-bottom:5px;}
+.myTarget li:nth-child(even){ background:#a7cbd9;}
+.myTarget li:first-child{ border-radius:10px 10px 0 0;}
+.myTarget li:last-child{ border-radius:0 0 10px 10px;}
+/*ending myTarget*/
+
+.westImage{ width:120px; height:90px; border:1px solid white; border-radius:10px; overflow:hidden !important; left:5px; position:relative;}
+.westImage img{ position:relative;}
+

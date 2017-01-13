@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:number_of_cars;datatype:string,name:business_name;datatype:string,name:varModBusinessName;datatype:string,name:MultiplePictures;datatype:int,name:user_id;datatype:int,name:web_site;datatype:string,name:type_business;datatype:int,name:first_name;datatype:string,name:last_name;datatype:string,name:area;datatype:string,name:city;datatype:string,name:state;datatype:string,name:phone;datatype:string,name:email;datatype:string,name:username;datatype:string,name:password;datatype:string,name:date_sign;datatype:date,name:Last_Log_In;datatype:date,name:Payment;datatype:string,name:Directory_Listing;datatype:string,name:Only_directory;datatype:string,name:craigslistLink;datatype:string,name:background_Image;datatype:blob,name:Background_Color;datatype:blob,name:BusinessSince;datatype:blob,name:BusinessDescription;datatype:blob" />
+</info>

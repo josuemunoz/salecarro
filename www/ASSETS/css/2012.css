@@ -1,0 +1,484 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		6;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+body{  background-image:url(../background/Android_notepad-download-letter_11.png); background-repeat:repeat-x; background-color:#006699; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+.loader{ width:auto; height:32px; position:absolute; top:45px; right:10px; text-align:center; }
+#a, #b, #c, #d, #e, #f, #g, #h{ text-align:center; margin:10px 0; padding:10px 0 5px 0; font-family:arial; font-size:10px; color:#FFF;}
+ul, li{ padding:0px; margin:0px; text-align:center;}
+.beta{ font-family:sans-serif; font-size:1em; color:#F00; position:absolute; top:10px; right:10px;}
+
+#h{ clear: both; float: left; margin-left: 0; width: 100%; display: none;}
+#g{ display:none;}
+h3{ font-family:sans-serif; text-align:center; font-size:12px; color:#CCC;}
+.green{ width:100%; height:auto; background:#33cc33; color:#FFF; font-family:Verdana, Geneva, sans-serif; font-weight:bold; font-size:1.3em; border-radius:5px; padding:10px 0; text-align:center;}
+.DealerArrow{ width:26px; height:26px; top:10px; right:30px; float:right; position:absolute !important;}
+
+#e{ padding:20px 0px; margin:0px; text-align:center;}
+#portfolio{ margin:auto; text-align:center;}
+#portfolio ul, #portfolio li{ margin:0px; padding:0px; text-align:center;}
+#portfolio li{ list-style-type:none; text-align:center;}
+#test{ width:100%; height:auto; float:left; overflow:hidden;}
+
+.test{ margin-top:10px;}
+.test ul, .test li{ padding:0px; margin:0px; float:left;}
+.test li{ width:100%; height:auto; float:left; text-align:left; padding:5px 0px; text-indent:20px; list-style-type:none; overflow:hidden; position:relative;}
+.test li:first-child{ border-radius:10px 10px 0 0;}
+.test li:last-child{ border-radius:0 0 10px 10px;}
+
+.bulletList{ width:auto; height:auto; position:absolute; top:10px; right:20px;}
+.red{ font-size:18px; font-weight:bold; color:#F00; background-color:#FFFFFF; padding:10px; text-align:center; margin-top:20px; border-radius:5px;}
+.blue{ font-size:18px; font-weight:bold; color:#0066CC; background-color:#FFFFFF; padding:10px; text-align:center; margin-top:20px; border-radius:5px;}
+
+.inventory{ width:100%; float:left;}
+.inventory img{ padding:5px;}
+.inventory li:nth-child(odd)    { background:#CCC; border:2px solid #FFF;}
+.inventory ul, .inventory li{ padding:0px; margin:0px;}
+.inventory li{ width:100%; height:auto; float:left; text-align:left; border:2px solid #999; border-radius:7px; margin:0px; list-style-type:none; padding:5px 0px; background:#FFF;}
+
+#carDealers{
+	margin-top:50px; 
+	}
+#carDealers ul, #carDealers li{
+	margin:0px; padding:0px; float:left; 
+	}
+	
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95.8695%;
+	padding-left: 1.0652%;
+	padding-right: 1.0652%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	height:104px;
+}
+#header img{ padding:10px 0px;}
+#links {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#a {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 31.8518%;
+	display: block;
+}
+#b {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 31.8518%;
+	display: block;
+}
+#c {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 31.8518%;
+	display: block;
+}
+#d {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 31.8518%;
+	display: block;
+}
+#e {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 65.9259%;
+	display: block;
+}
+#f {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 31.8518%;
+	display: block;
+}
+#g {
+	clear: none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 31.8518%;
+	display: block;
+}
+#largeImage {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#cdHeader {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#h {
+	clear:none;
+	float: left;
+	margin-left: 2.2222%;
+	width: 31.8518%;
+	display: block;
+}
+#editCarA {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block; overflow:hidden; text-shadow:1px 2px 3px #333;
+}
+#editCarA p{ float:left; width:50%; margin:0px; overflow:hidden;}
+#editCarA span{ width:100%; }
+/* this is the cell phone 768x1024*/
+#editCarA form{ color:#FFF; font-weight:bold; font-size:1.4em; font-family:arial;}
+#editCarA select textfield input textarea{ height:auto; text-shadow:1px 2px #333333; background-color:#FFF;
+ padding:15px 0px; margin:0px; display:block; font-family:arial; font-size:1em; color:#333; border:0px;}
+#editCarA input{ width:100%;}
+#editCarA textarea{ width:100%;}
+#editCarA select{ width:150%; }
+
+#editCarB{ clear: none; float: left; margin-left: 2.2222%; width: 48.8888%; display: block;}
+@media only screen and (min-width: 481px) {
+	.test li{ width:50%; height:auto; float:left; text-align:left; padding:5px 0px; text-indent:10px; list-style-type:none; position:relative;}
+	.beta{ font-family:sans-serif; font-size:1.4em; color:#F00; position:absolute; top:20px; right:20px;}
+	
+.gridContainer {
+	width: 88.5326%;
+	padding-left: 0.7336%;
+	padding-right: 0.7336%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#links {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#a {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 23.7569%;
+	display: block;
+}
+#b {
+	clear: none;
+	float: left;
+	margin-left: 1.6574%;
+	width: 23.7569%;
+	display: block;
+}
+#c {
+	clear: none;
+	float: left;
+	margin-left: 1.6574%;
+	width: 23.7569%;
+	display: block;
+}
+#d {
+	clear: none;
+	float: left;
+	margin-left: 1.6574%;
+	width: 23.7569%;
+	display: block;
+}
+#e {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 49.1712%;
+	display: block;
+}
+#f {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 23.7569%;
+	display: block;
+}
+#g {
+	clear: none;
+	float: left;
+	margin-left: 1.6574%;
+	width: 23.7569%;
+	display: block;
+}
+#largeImage {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#cdHeader {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#h {
+	clear: none;
+	float: left;
+	margin-left: 1.6574%;
+	width: 23.7569%;
+	display: block;
+}
+#editCarA {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block; overflow:hidden; text-shadow:1px 2px 3px #333;
+}
+#editCarA p{ float:left; width:49%; padding:5px 0px; margin:0px; overflow:hidden;}
+#editCarA span{ width:100%; padding:5px 0px; margin:0px;}
+/* this is the cell phone 768x1024*/
+#editCarA select textfield input textarea{ float:left; display:block;}
+#editCarA select textfield input textarea{ height:auto;
+background-color:#FFF; padding:5px 0px; text-shadow:1px 2px #333333;
+ margin:5px 0; display:block; font-family:arial; font-size:1.2em; color:#333; }
+#editCarA form{ color:#FFF; font-weight:bold; font-size:1.4em; font-family:arial;}
+#editCarA input{ width:99%;}
+#editCarA textarea{ width:99%;}
+#editCarA select{ width:150% !important;}
+
+#editCarB {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+	
+	body{}
+	.test li{ width:25%; height:auto; float:left; text-align:left; padding:5px 0px; text-indent:10px; list-style-type:none;}
+		.myTarget li{ width:25% !important; float:left;}
+	.myTarget li:nth-child(even){ background-color:#FFF;}
+.myTarget li:first-child{ border-radius:0px !important;}
+.myTarget li:last-child{ border-radius:0px !important;}
+.gridContainer {
+	width: 89.0217%;
+	max-width: 1232px;
+	padding-left: 0.4891%;
+	padding-right: 0.4891%;
+	margin: auto;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#links {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#a {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 15.7509%;
+	display: block;
+}
+#b {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 15.7509%;
+	display: block;
+}
+#c {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 15.7509%;
+	display: block;
+}
+#d {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 15.7509%;
+	display: block;
+}
+#e {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 49.4505%;
+	display: block;
+}
+#f {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 15.7509%;
+	display: block;
+}
+#g {
+	clear: none;
+	float: left;
+	margin-left: 1.0989%;
+	width: 15.7509%;
+	display: block;
+}
+#largeImage {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#cdHeader {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#h {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 15.7509%;
+	display:block;
+}
+#editCarA {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+#editCarB {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}

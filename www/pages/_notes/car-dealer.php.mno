@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Recordset1" value="name:id_car;datatype:int,name:year;datatype:string,name:date_insert;datatype:date,name:model;datatype:string,name:Model_name;datatype:string,name:model_id;datatype:string,name:price;datatype:string,name:notes;datatype:blob,name:image;datatype:string,name:id_salesperson;datatype:string,name:City_To_Sell;datatype:string,name:Zip_Code;datatype:string,name:State;datatype:string,name:make;datatype:string,name:make_id;datatype:string,name:miles;datatype:string,name:color;datatype:string,name:InteriorColor;datatype:string,name:vin_number;datatype:string,name:last_visit;datatype:date,name:number_views;datatype:int,name:TempCar;datatype:string,name:VarCarmod;datatype:string,name:deleteHide;datatype:string,name:StockNumber;datatype:string,name:bodyStyle;datatype:int,name:notReady;datatype:int" />
+	<infoitem key="UD_Recordset2" value="name:business_name;datatype:string" />
+</info>

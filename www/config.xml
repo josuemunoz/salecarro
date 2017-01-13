@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.salecarro.CarrApp"
+    version   = "1.0.8">
+
+<name>CAR APP</name>
+
+<description>
+SALECARRO.COM CAR APP
+</description>
+
+<author href="http//www.45graphics.net" email="josue@salecarro.com">
+Josue Munoz
+</author>
+
+
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+   
+	   
+		<gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
+		<gap:plugin name="org.apache.cordova.file" />
+    	<gap:plugin name="org.apache.cordova.file-transfer" />
+		<preference name="fullscreen" value="true" />
+
+  
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/device"/>
+	
+ 
+ 	<preference name="phonegap-version" 			value="3.7.0" />
+  	<preference name="orientation"    				value="vertical" />
+  	<preference name="target-device"    			value="universal" />
+  	<preference name="fullscreen"       			value="false" />
+	<preference name="webviewbounce" 				value="true" />
+	<preference name="prerendered-icon" 			value="false" />
+	<preference name="show-splash-screen-spinner" 	value="true" />
+	<preference name="splash-screen-duration" 		value="3000" />
+	<preference name="ios-statusbarstyle" 			value="black-opaque" />
+	<preference name="detect-data-types" 			value="true" />
+	
+
+<icon src="ASSETS/splash/icon.png" />
+
+
+<gap:splash src="ASSETS/splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+<gap:splash src="ASSETS/splash/splash_screen.png" />
+</widget>
