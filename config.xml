@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.salecarro.CarrApp" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.salecarro.CarrApp" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Car App</name>
     <description>
      SALECARRO.COM CAR APP
@@ -9,6 +9,19 @@ Josue Munoz
 </author>
 	
 <icon src="img/logo.png" />
+
+
+<config-file platform="ios" target="*-Info.plist" parent="CAMERA_USAGE_DESCRIPTION">
+		<string>This will use the camera for gallery</string>
+	</config-file>
+	<config-file platform="ios" target="*-Info.plist" parent="PHOTOLIBRARY_USAGE_DESCRIPTION">
+		<string>The library will be used if pictures are needed from phone used by user.</string>
+	</config-file>
+	
+	<config-file platform="ios" target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+		<string>pictures will be used only if app user takes them.</string>
+	</config-file>
+	
 	 
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
