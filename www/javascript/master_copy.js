@@ -467,7 +467,7 @@ function displayItem() //nothing here
 			img.setAttribute('src','http://45graphics.net/camera/ASSETS/icons/Android_notepad-download-letter_33.png');
 			img.setAttribute('width', '80');
 			img.setAttribute('height', '89');
-		var br = document.createElement('br');
+		//var br = document.createElement('br');
 		var br2 = document.createElement('br');
 		
 		var text = document.createTextNode('MY INVENTORY');
@@ -475,7 +475,7 @@ function displayItem() //nothing here
 			a.setAttribute('href', 'pages/my-car-inventory.html?userId='+ escape(userA));
 			div.appendChild(a);
 			a.appendChild(img);
-			div.appendChild(br);
+			//div.appendChild(br);
 			div.appendChild(br2);
 			div.appendChild(text);
 			ho.appendChild(div);
