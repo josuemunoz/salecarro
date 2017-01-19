@@ -681,7 +681,8 @@ document.addEventListener("deviceready",onDeviceReady,false);
 	
 function onDeviceReady() {
 	
-        pictureSource=navigator.camera.PictureSourceType;
+console.log(navigator.camera);	
+       pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
 		//alert('its ready');
 		
@@ -715,10 +716,8 @@ function onPhotoDataSuccess(FILE_URI) { // Called when a photo is successfully r
 	 // uploadPhoto();
 	  //E.innerHTML = imageURI;
 	  //alert("Image uploaded");
-	  imageLoaded();
-	 									
+	  imageLoaded();								
 	//console.log(this.imageURI +"**" + this.imageData+"**"+this.FILE_URI+"**"+this.DATA_URL);
-    
 	}
 
 function imageLoaded()//image loaded will display after image loaded
@@ -738,28 +737,46 @@ function imageLoaded()//image loaded will display after image loaded
 
 function capturePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
+	//alert("testing click"+ " "+ localStorage.getItem('userId'));
+	//alert();
+	//alert(navigator.platform);
+	//setTimeout(
       navigator.camera.getPicture(uploadPhoto, onFail, {
-		  	quality: 100,
+		  	quality: 90,
 			targetWidth: 700,
 			targetHeight:600,
-      		destinationType: navigator.camera.DestinationType.FILE_URI,
-			sourceType: navigator.camera.PictureSourceType.DATA_URL
-			});
+      		destinationType: navigator.camera.DestinationType.FILE_URL, 
+			sourceType: navigator.camera.PictureSourceType.DATA_URL,
+			correctOrientation: true
+			
+			
+			//sourceType: navigator.camera.PictureSourceType.DATA_URL
+		 	
+			})
+			
+			//, 100);
 										
 		//this.x = imageURI;
 			//alert(x);  								
-    }
-function uploadPhoto(imageURI){
+    
+	}
+	
+	//
+//function uploadPhoto(NATIVE_URI){
+	function uploadPhoto(imageData){
+		
+	//alert(imageData);
 	var options = new FileUploadOptions();
 				options.fileKey="file";
-				options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1)+'.jpg';
+				options.fileName=imageData.substr(imageData.lastIndexOf('/')+1)+'.jpg';
 				options.mimeType="image/jpeg";
 				options.chunkedMode = false;
 				var ft = new FileTransfer();
 				var c = localStorage.getItem('userId');
-				ft.upload(imageURI, "http://www.salecarro.com/uploadTest/test_upload.php?user="+c, win, fail, options, true);
-				onPhotoDataSuccess(imageURI);				
-        }
+				ft.upload(imageData, "http://www.salecarro.com/uploadTest/test_upload.php?user="+c, win, fail, options, true);
+				onPhotoDataSuccess(imageData);				
+        
+		}
 		
 function onPhotoURISuccess(imageURI){
     	var largeImage = $$('test');
