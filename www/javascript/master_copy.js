@@ -739,14 +739,16 @@ function capturePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
 	//alert("testing click"+ " "+ localStorage.getItem('userId'));
 	//alert();
-	//alert(navigator.platform);
+	alert(navigator.platform);
 	//setTimeout(
       navigator.camera.getPicture(uploadPhoto, onFail, {
 		  	quality: 90,
 			targetWidth: 700,
 			targetHeight:600,
-      		destinationType: navigator.camera.DestinationType.FILE_URL, 
-			sourceType: navigator.camera.PictureSourceType.DATA_URL,
+			sourceType: Camera.PictureSourceType.CAMERA,
+      		destinationType: Camera.DestinationType.FILE_URI, 
+			//destinationType: navigator.camera.DestinationType.CAMERA, 
+			
 			correctOrientation: true
 			
 			

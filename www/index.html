@@ -2,9 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> 
+  <!--   This is a wide open CSP declaration. To lock this down for production, see below. 
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    --> 
+  <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
 <title>Untitled Document</title>
 <!--
 <link href="boilerplate.css" rel="stylesheet" type="text/css">
@@ -38,7 +49,7 @@
   	<div id="d"><a href="#" onClick="getPage('app_car_dealer_list.php', 'test')"><img src="ASSETS/icons/Android_notepad-download-letter_32.png"></a><span>CAR DEALERS</span></div>
 
   	<div id="f"><a href="#" onClick="getPage('more-info-on-app.html', 'test')";><img src="ASSETS/icons/info.png" width="80" height="89"></a><span>MORE INFO</span></div>
-  	<div id="g"><a href="#" id="photoButton" onClick="capturePhoto(); return false"><img src="ASSETS/icons/add.png" width="80" height="89"></a><span>ADD CAR</span></div>
+  	<div id="g"><a href="#" id="photoButton" onClick="capturePhoto(); return false"><img src="ASSETS/icons/add.png" width="80" height="89"></a><span>ADDj lCAR</span></div>
     
   	</div>
 
