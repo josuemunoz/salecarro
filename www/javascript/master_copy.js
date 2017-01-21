@@ -43,7 +43,13 @@ carEntry()
 function $$(x){
 	return document.getElementById(x);
 	}
-	
+	setCurrentID();
+function setCurrentID(){
+		
+		var currentID = $$("currentID");
+			currentID.innerHTML = localStorage.getItem('userIdCar');
+		
+		}
 function date() // will return the date for data entry
 {
 date = new Date();
@@ -182,7 +188,7 @@ function getPage(page, target)
 		}
 		if(page == 'my-car-inventory.php')
 			{ 
-				var userid = localStorage.getItem('userId'); //
+				var userid =   localStorage.getItem('userIdCar'); //
 				//alert('running'+this.PageMyCarInventory);
 				if(userid != null && userid != ''){
 				if(navigator.platform != 'Win32'){
@@ -331,8 +337,8 @@ function getPageUpdate()
 							//newdiv.innerHTML = newD;
 							//setCookie('userId', newD, 30);
 							
-							this.id = localStorage.setItem('userId',newD);
-							//alert('this is now working '+ localStorage.getItem('userId'));
+							this.id = localStorage.setItem('userIdCar',newD);
+							//alert('this is now working '+ localStorage.getItem('userIdCar'));
 							
 							console.log('This is the userID: ' + newD);
 							//alert('The number is: ' + parseInt(newD));
@@ -456,7 +462,7 @@ function show(id)
 //displays the my inventory link if cookie is available	
 function displayItem() //nothing here
 	{
-		var userA = localStorage.getItem('userId');
+		var userA = localStorage.getItem('userIdCar');
 		if(userA){
 		var ho = document.getElementById('ho');
 		console.log('There is a cookie available with value of: '+ userA);
@@ -737,7 +743,7 @@ function imageLoaded()//image loaded will display after image loaded
 
 function capturePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
-	//alert("testing click"+ " "+ localStorage.getItem('userId'));
+	//alert("testing click"+ " "+ localStorage.getItem('userIdCar'));
 	//alert();
 	alert(navigator.platform);
 	//setTimeout(
@@ -774,7 +780,7 @@ function capturePhoto() {
 				options.mimeType="image/jpeg";
 				options.chunkedMode = false;
 				var ft = new FileTransfer();
-				var c = localStorage.getItem('userId');
+				var c = localStorage.getItem('userIdCar');
 				ft.upload(imageData, "http://www.salecarro.com/uploadTest/test_upload.php?user="+c, win, fail, options, true);
 				onPhotoDataSuccess(imageData);				
         
@@ -785,7 +791,7 @@ function onPhotoURISuccess(imageURI){
      	largeImage.style.display = 'block';
     }
 
-
+/*
 function capturePhotoEdit()
 	{
 		// Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
@@ -794,6 +800,7 @@ function capturePhotoEdit()
 		destinationType: destinationType.DATA_URL });
     }
 
+
 function getPhoto(source)
 	{
      // Retrieve image file location from specified source
@@ -801,7 +808,7 @@ function getPhoto(source)
       destinationType: destinationType.FILE_URI,
       sourceType: source });
     }
- 
+ */
 function onFail(message)
 	{
      alert('Failed because: ' + message);
@@ -907,6 +914,7 @@ function selectedText(x)
 		var s = terminal.options[terminal.selectedIndex].text;
 		return s;
 		}
+	
 
 function addOption(selectbox, value, text)
 	{
@@ -980,7 +988,7 @@ function setFooter(){
 	var 	x = $$("footer");
 	var 	year = new Date();
 	year = 	year.getFullYear();
-	var c = localStorage.getItem('userId');
+	var c = localStorage.getItem('userIdCar');
 	
 	if(c){
 		console.log(c+' ran setFooter() function'); 
