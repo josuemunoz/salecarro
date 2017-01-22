@@ -746,23 +746,17 @@ function capturePhoto() {
 	//alert("testing click"+ " "+ localStorage.getItem('userIdCar'));
 	//alert();
 	alert(navigator.platform);
-	//setTimeout(
+	setTimeout(
       navigator.camera.getPicture(uploadPhoto, onFail, {
 		  	quality: 90,
 			targetWidth: 700,
 			targetHeight:600,
-			sourceType: Camera.PictureSourceType.CAMERA,
-      		destinationType: Camera.DestinationType.FILE_URI, 
-			//destinationType: navigator.camera.DestinationType.CAMERA, 
-			
+			//sourceType: Camera.PictureSourceType.CAMERA,
+      		//destinationType: Camera.DestinationType.FILE_URI,
 			correctOrientation: true
-			
-			
-			//sourceType: navigator.camera.PictureSourceType.DATA_URL
-		 	
 			})
 			
-			//, 100);
+			, 200);
 										
 		//this.x = imageURI;
 			//alert(x);  								
