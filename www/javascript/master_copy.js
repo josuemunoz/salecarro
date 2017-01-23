@@ -744,23 +744,17 @@ function imageLoaded()//image loaded will display after image loaded
 function capturePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
 	//alert("testing click"+ " "+ localStorage.getItem('userIdCar'));
-	//alert();
-	alert(navigator.platform);
-	setTimeout(
+	//alert(navigator.platform);
+	//setTimeout(
       navigator.camera.getPicture(uploadPhoto, onFail, {
 		  	quality: 90,
 			targetWidth: 700,
 			targetHeight:600,
+			correctOrientation: true
+			});//, 500);
+			//encondingType: 'JPEG',
 			//sourceType: Camera.PictureSourceType.CAMERA,
       		//destinationType: Camera.DestinationType.FILE_URI,
-			correctOrientation: true
-			})
-			
-			, 200);
-										
-		//this.x = imageURI;
-			//alert(x);  								
-    
 	}
 	
 	//
