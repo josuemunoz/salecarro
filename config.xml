@@ -21,7 +21,7 @@ Josue Munoz
 	<config-file platform="ios" target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
 		<string>pictures will be used only if app user takes them.</string>
 	</config-file>
-	
+	<preference name="CameraUsesGeolocation" value="false" />
 	<feature name="Camera">
     <param name="ios-package" value="CDVCamera" />
 </feature>
