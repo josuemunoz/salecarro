@@ -750,11 +750,14 @@ function capturePhoto() {
 		  	quality: 90,
 			targetWidth: 700,
 			targetHeight:600,
+			sourceType: Camera.PictureSourceType.CAMERA,
+			destinationType: Camera.DestinationType.FILE_URI,
+			encondingType: Camera.EncodingType.JPEG,
 			correctOrientation: true
 			});//, 500);
-			//encondingType: 'JPEG',
-			//sourceType: Camera.PictureSourceType.CAMERA,
-      		//destinationType: Camera.DestinationType.FILE_URI,
+			
+			
+      		//
 	}
 	
 	//
