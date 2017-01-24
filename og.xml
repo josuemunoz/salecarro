@@ -11,6 +11,23 @@ Josue Munoz
 <icon src="img/logo.png" />
 
 
+<config-file platform="ios" target="*-Info.plist" parent="CAMERA_USAGE_DESCRIPTION">
+		<string>This will use the camera for gallery</string>
+	</config-file>
+	<config-file platform="ios" target="*-Info.plist" parent="PHOTOLIBRARY_USAGE_DESCRIPTION">
+		<string>The library will be used if pictures are needed from phone used by user.</string>
+	</config-file>
+	
+	<config-file platform="ios" target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+		<string>pictures will be used only if app user takes them.</string>
+	</config-file>
+	<preference name="CameraUsesGeolocation" value="false" />
+	<feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+<feature name="Capture">
+    <param name="ios-package" value="CDVCapture" />
+</feature>
 
 	 
     <content src="index.html" />
