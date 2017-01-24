@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.salecarro.CarrApp" version="1.0.16" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.salecarro.CarrApp" version="1.0.15" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Car App</name>
     <description>
      SALECARRO.COM CAR APP
@@ -12,14 +12,34 @@ Josue Munoz
 
 
 
+	<preference name="CameraUsesGeolocation" value="false" />
+	<feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+<feature name="Capture">
+    <param name="ios-package" value="CDVCapture" />
+</feature>
+
 	 
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
+	<config-file platform="ios" target="*-Info.plist" parent="CAMERA_USAGE_DESCRIPTION">
+		<string>This will use the camera for gallery</string>
+	</config-file>
+	<config-file platform="ios" target="*-Info.plist" parent="PHOTOLIBRARY_USAGE_DESCRIPTION">
+		<string>The library will be used if pictures are needed from phone used by user.</string>
+	</config-file>
 	
+	<config-file platform="ios" target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+		<string>pictures will be used only if app user takes them.</string>
+	</config-file>
 
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1">
+	
+	</plugin>
+	
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
