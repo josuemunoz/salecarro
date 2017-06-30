@@ -52,10 +52,10 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 </head>
 
 <body>
+jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 <div class="headerTitle"><?php echo strtoupper($row_Recordset1['make']); ?></div>
-
 <ul class="myTarget">
-testtttttttttttttttttttt
+
 
   <?php do { ?>
 
@@ -72,7 +72,7 @@ echo $car->ymm();
 ?></h1> <h5>  <?php echo $car->showPrice();
 					echo '<br/>';
 					echo $car->showMiles(); ?> </h5> 
-<div class="westImage"><a href="car_view.php"><img name="" src="http://www.salecarro.com/assets/cars_for_sale/<?php echo $row_Recordset1['id_salesperson']; ?>/_small<?php echo $row_Recordset1['image']; ?>" alt="" /></a></div>
+<div class="westImage"><a><img name="" src="http://www.salecarro.com/assets/cars_for_sale/<?php echo $row_Recordset1['id_salesperson']; ?>/_small<?php echo $row_Recordset1['image']; ?>" alt="" /></a></div>
     
  
       

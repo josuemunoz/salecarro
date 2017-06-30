@@ -17,7 +17,12 @@ var request = null;
 
    if (request == null)
      alert("Error creating request object!");
-	 
+	
+	
+function getAllDealers(){
+	alert("hello there");
+	
+	} 
 //variables
 var f = '';
 
@@ -37,13 +42,15 @@ show()			408
 getCar()	
 extraPicture(id)	960
 carEntry()
+MY INVENTORY 491
+carApp.getInv
 */
 		
 //gets emlemeny by id
 function $$(x){
 	return document.getElementById(x);
 	}
-	setCurrentID();
+	//setCurrentID();
 function setCurrentID(){
 		
 		var currentID = $$("currentID");
@@ -186,6 +193,8 @@ function getPage(page, target)
 		var url = 'pages/'+this.page;
 		}
 		}
+		
+		
 		if(page == 'my-car-inventory.php')
 			{ 
 				var userid =   localStorage.getItem('userIdCar'); //
@@ -357,6 +366,8 @@ function getPageUpdate()
 	}
 }
 
+
+
 function GetPage(page) {
 	//loading('west');
 	hideHome();
@@ -473,20 +484,20 @@ function displayItem() //nothing here
 			img.setAttribute('src','http://45graphics.net/camera/ASSETS/icons/Android_notepad-download-letter_33.png');
 			img.setAttribute('width', '80');
 			img.setAttribute('height', '89');
-		//var br = document.createElement('br');
-		var br2 = document.createElement('br');
+		
+		//span
+		var span = document.createElement("span");
 		
 		var text = document.createTextNode('MY INVENTORY');
-		
 			a.setAttribute('href', 'pages/my-car-inventory.html?userId='+ escape(userA));
 			div.appendChild(a);
 			a.appendChild(img);
-			//div.appendChild(br);
-			div.appendChild(br2);
-			div.appendChild(text);
-			ho.appendChild(div);
+			
+			span.appendChild(text);
+			div.appendChild(span);
 		var place = document.getElementById('c');
 			ho.insertBefore(div,place);
+			
 			hide('c');
 			show('g');
 		}else{
@@ -1012,7 +1023,7 @@ function extraPicture(id)
 		
 		var g = r.responseText;
 			console.log(g);
-			//alert('hello');
+			alert('hello');
 			}
 		}	
 		r.send(null);

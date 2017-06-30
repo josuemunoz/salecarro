@@ -77,6 +77,7 @@ $color_index = 0;
 $i = 0;
 
 ?>
+<div class="goHome"><a href="../index.html">Go home fixxxxxxx</a></div>
 <div class="test" id="test">
 	<ul>
     	<?php do { ?>

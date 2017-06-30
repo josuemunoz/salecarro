@@ -30,17 +30,22 @@ Do the following if you're using your customized build of modernizr (http://www.
 
 
 </head>
-<body id="B" onLoad="getPage('car-dealer.php?user_id=238', 'inventory')">
+<!--<body id="B" onLoad="getPage('car-dealer.php?user_id=230', 'inventory')"> -->
+
+ <body id="B" onLoad="getAllDealers()">
 
 <div class="gridContainer clearfix">
 	
   <div id="header">
-  	<div class="beta">Beta 1.5</div><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></div>
-   		
+  	<div class="beta" id="beta">Beta 1.5.16</div>
+    <div><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></div>
+   		 <div class="goHome"><a href="../index.html">Go home fixxxxxxx</a></div>
+         
            <div id="inventory"  class="myTarget">
                 <!-- loader -->
                 <div class="loader" id="loader"><img src="../ASSETS/loader/ajax-loader.gif" alt="loading logo"><br/>Loading...</div>
-                
+               
+          </div>
           </div>
   
 <div id="content"></div>

@@ -8,7 +8,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Untitled Document</title>
+<title>Car view</title>
 <!-- <link href="../boilerplate.css" rel="stylesheet" type="text/css"> -->
 <link href="../ASSETS/css/2012.css" rel="stylesheet" type="text/css">
 <link href="../ASSETS/css/imports_css.css" rel="stylesheet" type="text/css">
@@ -32,17 +32,18 @@ Do the following if you're using your customized build of modernizr (http://www.
 
 </head>
 
-<body id="B" onLoad="getPage('cars-by-make.php', 'inventory') ">
+<body>
 
-
-	
   <div id="header">
   	<div class="beta">Beta 1.0.17</div>
     <div><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></div>
-   		<div class="goHome"><a  href="../index.html">Go Back</a></div>
+   		<div class="goHome"><a onClick="window.history.go(-1)">Go Back</a></div>
+        <div class="goHome" id="call">Call Today!</div>
+        
            <div id="inventory" class="myTarget">
                 <!-- loader -->
                 <div class="loader" id="loader"><img src="../ASSETS/loader/ajax-loader.gif" alt="loading logo"><br/>Loading...</div>
+       
                 
           </div>
           </div>
@@ -53,25 +54,12 @@ Do the following if you're using your customized build of modernizr (http://www.
     <h3>SaleCarro 2013 | <span id="logOut"><a href="#" onClick="clearCookie('userId')">log-Out</a></span></h3>
     -->
   </div>
-
-
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../javascript/jm.js" language="javascript"> </script>
 <script src="../respond.min.js"></script>
-<script type="text/javascript" src="../javascript/master_copy.js"> </script>
+<!-- <script type="text/javascript" src="../javascript/master_copy.js"> </script> -->
 <script language="javascript">
-	var a ={
-		carView: function(){
-			//alert(window.location.hostname);
-			//document.location("car_view.html");
-			},
-			
-		byId: function(x){ return y = document.getElementById(x); },
-		
-		setEvents: function(){
-			var x = a.byId("westImage");
-			alert(x.length);
-			}
-		}
-	//addEventListener("load", a.setEvents(), true);
+carApp.viewCar();
 </script>
 </body>
 </html>
