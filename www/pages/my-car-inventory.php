@@ -82,11 +82,13 @@ $totalRows_Recordset2 = mysql_num_rows($Recordset2);
   <div class="westImage"><a href="car-edit.html?car=<?php echo $row_Recordset1['id_car']; ?>&citytosell=<?php echo $row_Recordset2['area']; ?>"><img name="" src="http://www.salecarro.com/assets/cars_for_sale/<?php echo $row_Recordset1['id_salesperson']; ?>/_small<?php echo $row_Recordset1['image']; ?>" alt="" /></a></div>
      
      <button id="edit"><a href="car-edit.html?car=<?php echo $row_Recordset1['id_car']; ?>&citytosell=<?php echo $row_Recordset2['area']; ?>">Edit Post</a></button>
+     <!--
      <button id="addPictures">Add Pictures</button>
      <button id="sold">Mark as Sold</button>
      <button id="delete">Delete Post</button>
      <button onclick="extraPicture(<?php echo $row_Recordset1['id_car']; ?>)">test folder creation</button>
-      <?php echo '</li>'; ?>
+      -->
+	  <?php echo '</li>'; ?>
      
     
     <?php } while ($row_Recordset1 = mysql_fetch_assoc($Recordset1)); ?>

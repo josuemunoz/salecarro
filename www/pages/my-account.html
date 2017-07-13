@@ -1,0 +1,99 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>Untitled Document</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="yeah.css" rel="stylesheet" type="text/css">
+<link href="../ASSETS/css/2012.css" rel="stylesheet" type="text/css">
+<link href="../ASSETS/css/imports_css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	left: 15px;
+	top: 142px;
+	width: 377px;
+	height: 109px;
+	z-index: 1;
+}
+</style>
+
+
+
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+
+<script>
+
+</script>
+
+
+<div class="gridContainer clearfix">
+  <div id="header">
+  <div class="beta">1.0.20</div>
+  <div><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></div> </div>
+ 
+  <div id="boxA">
+  <h1 class="middle title big">Account Settings</h1>
+  <label>Business Name:</label>
+  <input type="text" name="businessName" id="businessName" placeholder="Business name">
+  
+  <label>Web Site:</label>
+  <input type="text" name="website" id="website" placeholder="Web site">
+  
+  <label>First Name</label>
+  <input type="text" name="first" id="first" placeholder="First name">
+  
+  <label>Last Name:</label>
+  <input type="text" name="last" id="last" placeholder="Last name">
+  
+  <label>Phone Number:</label>
+  <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone number">  
+  
+  <label>Username:</label>
+  <input type="text" name="userName" id="userName" placeholder="Username">
+  
+  <label>Email:</label>
+  <input type="email" name="email" id="email" placeholder="Email">
+  
+  <label>Password:</label>
+  <input type="text" name="password" id="password" placeholder="password">
+  
+  <input name="" type="button" onClick="carAPI.updateUserData()" value="Save the data">
+  
+    
+  </div>
+ 
+</div>
+
+<script src="../javascript/jm.js"></script>
+<script language="javascript">carAPI.getUserData()</script>
+<script language="javascript">
+
+//alert(formAsh.numberOfInputs());
+
+</script>
+
+</body>
+</html>

@@ -1,15 +1,11 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!DOCTYPE html> 
 <html>
-<!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <title>Untitled Document</title>
-<link href="../boilerplate.css" rel="stylesheet" type="text/css">
+
+<!--<link href="../boilerplate.css" rel="stylesheet" type="text/css">-->
 <link href="../ASSETS/css/2012.css" rel="stylesheet" type="text/css">
 <link href="../ASSETS/css/imports_css.css" rel="stylesheet" type="text/css">
 
@@ -35,7 +31,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <div class="gridContainer clearfix">
 	
   <div id="header">
-  	<div class="beta">Beta 1.7.1</div>
+  	<div class="beta" id="beta">car-edit.html 1.0.20</div>
   	<a href="../index.html"><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></a></div>
    		<div id="test"></div>
            <div id="inventory"  class="myTarget">
@@ -43,36 +39,38 @@ Do the following if you're using your customized build of modernizr (http://www.
                 <div class="loader" id="loader" style="display:none;"><img src="../ASSETS/loader/ajax-loader.gif" alt="loading logo"><br/>Loading...</div>
                 
           </div>
+          
  
-  <div id="editCarA">
-   <form name="form1" method="post" action="" id="form1">
-     <span> MAKE<br>
-      <select onChange="populateList()" name="MAKE" id="MAKE">
-       
-      </select></span>
-  
-    <span>MODEL<br>
-    <select name="MODEL" id="MODEL">
-    </select></span>
+      
+  <!-- <div id="editCarA" class="myForm"> -->
+   <div class="myForm"> 
+  <!-- <form name="form1" method="post" action="" id="form1"> -->
+     
+    <label>MAKE</label>
+    <select onChange="populateList()" name="MAKE" id="MAKE"></select>
+        
+    <label>MODEL</label>
+    <select name="MODEL" id="MODEL"></select>
     
-    <p>YEAR<br>
-    <input type="text" name="YEAR" id="YEAR"></p>
+    <label>YEAR</label>
+    <input type="text" name="YEAR" id="YEAR">
     
-    <p>MILES<br>
-    <input name="MILES" type="text" id="MILES"></p>
+    <label>MILES</label>
+    <input name="MILES" type="text" id="MILES">
     
-    <p>PRICE<br>
-    <input type="text" name="PRICE" id="PRICE"></p>
+    <label>PRICE</label>
+    <input type="text" name="PRICE" id="PRICE">
     
-    <p>COLOR<br>
-    <input name="COLOR" type="text" id="COLOR"></p>
+    <label>COLOR</label>
+    <input name="color" type="text" id="color">
     
-    <span>DESCRIPTION<br>
-    <textarea name="DESCRIPTION" rows="5" id="DESCRIPTION"></textarea><br></span>
+    <label>DESCRIPTION</label>
+    <textarea name="DESCRIPTION" rows="5" id="DESCRIPTION"></textarea>
     
-    <span><input onClick="carEntry(); return false;" name="submit" type="submit" value="submit"></span>
+    <input onClick="carEntry(); return false;" name="submit" type="submit" value="submit">
     
-</form> <div id="editCarB"></div>
+<!-- </form> -->
+<div id="editCarB"></div>
   </div>
  
  <div id="footer">
@@ -96,5 +94,5 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script type="text/javascript" src="../javascript/master_copy.js"> </script>
 <script type="text/javascript">
 //populateCarEdit(getUrlVars()["car"]);
-setTimeout('populateCarEdit(getUrlVars()["car"])', 2000);
+setTimeout('populateCarEdit(getUrlVars()["car"])', 100);
 </script>

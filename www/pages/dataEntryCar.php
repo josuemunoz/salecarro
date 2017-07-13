@@ -37,8 +37,9 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 if($_GET[id_car]){
 //if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
-  $updateSQL = sprintf("UPDATE cars SET notReady=%s, notes=%s, City_To_Sell=%s, miles=%s, model=%s, model_id=%s, Model_name=%s, make=%s, make_id=%s, price=%s, `year`=%s, date_insert=%s, VarCarmod=%s WHERE id_car=%s",
+  $updateSQL = sprintf("UPDATE cars SET notReady=%s, color='%s', notes=%s, City_To_Sell=%s, miles=%s, model=%s, model_id=%s, Model_name=%s, make=%s, make_id=%s, price=%s, `year`=%s, date_insert=%s, VarCarmod=%s WHERE id_car=%s",
                        GetSQLValueString($_GET['notReady'], "int"),
+					   GetSQLValueString($_GET['color'], "text"),
 					   GetSQLValueString($_GET['notes'], "text"),
 					   GetSQLValueString($_GET['City_To_Sell'], "text"),
                        GetSQLValueString($_GET['miles'], "text"),
@@ -69,7 +70,7 @@ $totalRows_Recordset1 = mysql_num_rows($Recordset1);
 ?>
 
 
-<div class="green">This car has been updated!! Please wait.<meta http-equiv="refresh" content="2;URL=../index.html" />
+<div class="green">This car has been updated!! Please wait.<meta http-equiv="refresh" content="1;URL=../index.html" />
 </div>
 <?php
 mysql_free_result($Recordset1);

@@ -83,6 +83,7 @@ function getPage(page, target)
 			{
 		
 		var makeId 	= $$('MAKE').value;
+		var color   = $$("color").value
 		var make   	= selectedText('MAKE');
 		var modelId	= $$('MODEL').value;
 		var model	= selectedText('MODEL');
@@ -101,6 +102,7 @@ function getPage(page, target)
 			var citytosell = getUrlVars()["citytosell"];
 			url	+= '?id_car='+a;
 			url += '&notReady='+0;
+			url += '&color='+color;
 			url += '&miles=none';
 			url += '&model='+model;
 			url += '&model_id='+modelId;
@@ -214,7 +216,7 @@ function getPage(page, target)
 				}
 		if(page == 'more-info-on-app.html')
 			{
-			var url = "pages/" + this.page;
+			var url = "http://45graphics.net/camera/pages/" + this.page;
 			}
 		if(page == 'users.php')
 			{
@@ -356,7 +358,7 @@ function getPageUpdate()
 							//if(userOne != null && userOne == ''){
 							
 							
-							setTimeout('document.location.reload(true)',2500);
+							setTimeout('document.location.reload(true)',1000);
 							//}
 							
 							}
@@ -470,6 +472,8 @@ function show(id)
 			x.style.height = 'auto';
 			
 		}
+		
+		
 //displays the my inventory link if cookie is available	
 function displayItem() //nothing here
 	{
@@ -954,8 +958,8 @@ function populateCarEdit(id_car)
 		if (r.readyState == 4 && r.status == 200)
 		{
 		
-		var v = ['YEAR', 'MILES', 'PRICE', 'DESCRIPTION'];
-		var y = ['year', 'miles', 'price', 'notes'];
+		var v = ['YEAR', 'MILES', 'PRICE', 'DESCRIPTION', "color"];
+		var y = ['year', 'miles', 'price', 'notes', "color"];
 		var	car = JSON.parse(r.responseText);
 		//console.log(car.price);
 			for(var i=0; i<v.length; i++){
@@ -1033,6 +1037,9 @@ function extraPicture(id)
 //set setFooter function sets the footer.
 dayOrNight();
 setTimeout("setFooter()", 500);
+
+
+//var setUp = 
 
 
 

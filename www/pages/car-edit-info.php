@@ -48,6 +48,7 @@ if($_GET[id_car]){
 	
 	
 	$arr = array(
+	'color' => $row_Recordset1['color'],
 	'make_id' => $row_Recordset1['make_id'],
 	'model_id' => $row_Recordset1['model_id'],
 	'model_name' => ucwords($row_Recordset1['model']),

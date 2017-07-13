@@ -11,8 +11,8 @@ border-radius:5px;
 img.borderwhite{ border-radius:14px !important; margin:0px !important; padding:0px !important;}
 #call{ margin-left:10px;}
 li#left{ color:#000 !important; float:left !important; text-align:left; padding:4%; width:92%; line-height:25px; font-family:"Arial Black", Gadget, sans-serif; font-size:1em; overflow:hidden;}
-.news1{ margin:20px; color:#CCC; font-family:Verdana, Geneva, sans-serif; font-size:1.5em !important;}
-.middle{ text-align:center; width:80%; margin:10px}
+.news1{ color:#CCC; font-family:Verdana, Geneva, sans-serif; font-size:1.6em !important; text-align:center; padding:20px 0px;}
+.middle{ text-align:center; margin:0;}
 .goHome a{ color:#FFF; list-style:none; text-decoration:none; display:block;}
 .goHome a:vistited{ color:#FFF;}
 .font, .box, .list{ font-family:sans-serif; font-size:16px; color:#333; line-height:19px;}
@@ -33,18 +33,31 @@ background: linear-gradient(#ccc, #FFF, #CCC);
 background: -webkit-linear-gradient(white, #ccc, #FFF);
 border: 1px solid #099;
 display: block; text-align:center; float:left;
-padding: 0px;
+padding: 10px 0;
 border-radius: 10px;}
 
 .myForm input[type=text], input[type=submit]{ padding:10px;}
-.myForm label, input, textarea{ margin:0 0 0 15px; float:left; display:inline-block; clear:left; font-family:Verdana, Geneva, sans-serif;}
-.myForm label{ color:#999;}
-.myForm input[type=text], textarea, button, input[type=email], input[type=tel], input[type=password], input[type=submit]{
+.myForm select, label, input, textarea{ margin:0 0 0 15px; float:left; display:inline-block; clear:left; font-family:Verdana, Geneva, sans-serif;}
+
+.myForm input[type=text], select, textarea, button, input[type=email], input[type=tel], input[type=password], input[type=submit], input[type=number]{
 	border:1px solid #666; border-radius:5px; margin:10px; padding:10px; width:auto; color:black; font-size:1.2em; background-color:#CCC; display:block;}
 .myForm input[type=submit]{ width:auto;}
 .myForm textarea{ resize:none; width:auto; height:auto;}
+.myForm select{ padding:10px;}
+<!--  fix this -->
+.bbbutton{ width:auto; height:50px;  padding:5px; float:left; font-family:Verdana, Geneva, sans-serif; font-size:1.2em; color:black;}
+.title {font-family:Arial, Helvetica, sans-serif;}
+.big{ font-size:2em; padding:10px;}
+#boxA{ padding:0px; margin:0px; float:left;}
+#boxA{ background-color:#CCC; border-radius:20px; width:100%; padding:10px 0; margin:20px 0; height:auto; display:block;}
+#boxA label{width:100%; text-indent:20px; display:block; margin:auto; color:#333; padding:5px 0; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#666;}
+#boxA input{ font-family:Verdana, Geneva, sans-serif; font-size:1.4em; font-stretch:ultra-condensed; background-color:#FFF; color:#333; border-bottom:1px solid red; border-radius:5px; width:90%; margin: 0 5%; padding:10px 0 10px 0px; text-indent:10px; text-align:left; border:none; display:block;}
+#boxA input[type=tel]{}
+#boxA input[type=button] { color:#fff; float:right; width:auto; padding:10px; margin:20px; background-color:#03F !important;}
 
-button{ width:auto; height:50px;  padding:5px; float:left; font-family:Verdana, Geneva, sans-serif; font-size:1.2em; color:black;}
+#bar{ width:80%; z-index:2; height:100%; background-color:#03F; color:#FFF; display:none; position:fixed; overflow:auto; top:0; right:0; bottom:0; left:0; -webkit-overflow-scrolling: touch;}
+#barOverlay{width:20%; overflow:hidden; opacity:.8; z-index:3; height:100%; background-color:#039; color:#FFF; display:none; position:fixed; right:0;}
+
 /*
 #edit, #delete, #addPictures, #sold, #test{ background: none repeat scroll 0 0 #FFFFFF;
     
