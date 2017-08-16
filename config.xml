@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.salecarro.CarrApp" version="1.0.21" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Car App</name>
+<widget id="com.salecarro.CarrApp" version="1.0.23" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Salecarro Car App</name>
     <description>
      SALECARRO.COM CAR APP
     </description>

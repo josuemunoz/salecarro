@@ -27,11 +27,12 @@ function getAllDealers(){
 var f = '';
 
 /*
+g
 this.id
 functions
 uploadPhoto() 740
-capturePhoto()  	794  	
-displayItem()		461	
+capturePhoto()  	777  	
+displayItem()		479
 getPage() 		39
 getUrlVars() 		855
 logIn()			545
@@ -49,6 +50,11 @@ carApp.getInv
 //gets emlemeny by id
 function $$(x){
 	return document.getElementById(x);
+	}
+function byId(x){
+	
+	return document.getElementById(c);
+	
 	}
 	//setCurrentID();
 function setCurrentID(){
@@ -83,7 +89,7 @@ function getPage(page, target)
 			{
 		
 		var makeId 	= $$('MAKE').value;
-		var color   = $$("color").value
+		var color   = $$("color").value;
 		var make   	= selectedText('MAKE');
 		var modelId	= $$('MODEL').value;
 		var model	= selectedText('MODEL');
@@ -94,7 +100,7 @@ function getPage(page, target)
 		var citytosell = '619';//needs to fix this please
 			
 		if(navigator.platform != 'Win32'){
-			url	="http://www.45graphics.net/camera/pages/dataEntryCar.php";
+			url	="https://www.45graphics.net/camera/pages/dataEntryCar.php";
 		}else{
 				url	="dataEntryCar.php";
 				}
@@ -102,12 +108,12 @@ function getPage(page, target)
 			var citytosell = getUrlVars()["citytosell"];
 			url	+= '?id_car='+a;
 			url += '&notReady='+0;
-			url += '&color='+color;
+			url += '&color='+escape(color);
 			url += '&miles=none';
-			url += '&model='+model;
+			url += '&model='+escape(model);
 			url += '&model_id='+modelId;
-			url += '&Model_name='+model;
-			url += '&make='+make;
+			url += '&Model_name='+escape(model);
+			url += '&make='+escape(make);
 			url += '&make_id='+makeId;
 			url += '&price='+price;
 			url += '&year='+year;
@@ -115,8 +121,8 @@ function getPage(page, target)
 			url += '&date_insert='+date();
 			console.log('Fix line 89');
 			//console.log(date());
-			url += '&VarCarmod='+make+model+modelId;
-			url += '&notes='+notes;
+			url += '&VarCarmod='+escape(make)+escape(model)+modelId;
+			url += '&notes='+escape(notes);
 			url += '&City_To_Sell='+citytosell;
 			//url += ''
 
@@ -124,7 +130,7 @@ function getPage(page, target)
 		if(this.model == 'models.php')
 			{
 				if(navigator.platform != 'Win32'){
-				var url = 'http://45graphics.net/camera/ASSETS/extras/'+this.page;
+				var url = 'https://www.45graphics.net/camera/ASSETS/extras/'+this.page;
 				//alert('this is running');
 				}else{
 					//var url = '/camera/ASSETS/extras/'+this.page;
@@ -134,7 +140,7 @@ function getPage(page, target)
 		if(this.page == 'makesSelect.php')
 			{
 				if(navigator.platform != 'Win32'){
-				var url = 'http://45graphics.net/camera/ASSETS/extras/'+this.page;
+				var url = 'https://www.45graphics.net/camera/ASSETS/extras/'+this.page;
 				//alert('this is running');
 				}else{
 					//var url = '/camera/ASSETS/extras/'+this.page;
@@ -146,7 +152,7 @@ function getPage(page, target)
 			{
 				console.log(this.PageCarDealer);
 				if(navigator.platform != 'Win32'){ 
-		var url = 'http://www.45graphics.net/camera/pages/'+this.page;
+		var url = 'https://www.45graphics.net/camera/pages/'+this.page;
 			}else{
 		//var url = "car_ajax/" + this.page;
 		var url = this.page;
@@ -158,7 +164,7 @@ function getPage(page, target)
 			{
 				
 				if(navigator.platform != 'Win32'){ 
-				var url = "http://www.45graphics.net/camera/pages/" + this.page;
+				var url = "https://www.45graphics.net/camera/pages/" + this.page;
 				//var url = this.page;
 				//alert('running the droid code');
 				//alert('debug mode');
@@ -175,11 +181,11 @@ function getPage(page, target)
 				
 				if(navigator.platform != 'Win32'){
 					console.log('make.php running debig mode:');
-				var url = "http://www.45graphics.net/camera/pages/" + this.page;
+				var url = "https://www.45graphics.net/camera/pages/" + this.page;
 				//var url = "/pages/" + this.page;
 				}else{
 				var url = 'pages/' + this.page;
-				//var url = "http://www.45graphics.net/camera/pages/" + this.page;
+				//var url = "https://www.45graphics.net/camera/pages/" + this.page;
 				alert("fix line 171");
 				}
 				
@@ -188,7 +194,7 @@ function getPage(page, target)
 		if(page == 'app_car_dealer_list.php')
 			{
 			if(navigator.platform != 'Win32'){ 
-		var url = "http://45graphics.net/camera/pages/" + this.page;
+		var url = "https://www.45graphics.net/camera/pages/" + this.page;
 		//var url = this.page;
 			}else{
 		//var url = "car_ajax/" + this.page;
@@ -206,7 +212,7 @@ function getPage(page, target)
 					
 					
 					
-					var url = 'http://45graphics.net/camera/pages/'+this.page+ "?userId=" + userid;
+					var url = 'https://www.45graphics.net/camera/pages/'+this.page+ "?userId=" + userid;
 					 console.log('my-car-inventory.php ran: ');
 					 console.log('userID = '+ userid);
 					}else{
@@ -216,14 +222,14 @@ function getPage(page, target)
 				}
 		if(page == 'more-info-on-app.html')
 			{
-			var url = "http://45graphics.net/camera/pages/" + this.page;
+			var url = "https://www.45graphics.net/camera/pages/" + this.page;
 			}
 		if(page == 'users.php')
 			{
 			if(navigator.platform != 'Win32'){
 			LogIn();//line 493
 			console.warn('Dont forget to fix line 63!');
-			var url = "http://www.45graphics.net/camera/pages/" + this.page;
+			var url = "https://www.45graphics.net/camera/pages/" + this.page;
 			
 				url += '?email='+username;
 				url += '&password='+password;
@@ -238,11 +244,11 @@ function getPage(page, target)
 			//
 			//////////////////////////////////////////////////////////////////////
 			var url = "pages/" + this.page;
-			//var url = "http://www.45graphics.net/camera/pages/" + this.page;
+			//var url = "https://www.45graphics.net/camera/pages/" + this.page;
 			//////////////////////////////////////////////////////////////////////
 			//for actual app debugging
 			console.warn('Dont forget to fix line 63!');
-			//var url = "http://www.45graphics.net/camera/pages/" + this.page;
+			//var url = "https://www.45graphics.net/camera/pages/" + this.page;
 			
 				url += '?email='+username;
 				url += '&password='+password;
@@ -358,7 +364,7 @@ function getPageUpdate()
 							//if(userOne != null && userOne == ''){
 							
 							
-							setTimeout('document.location.reload(true)',1000);
+							setTimeout('document.location.reload(true)',500);
 							//}
 							
 							}
@@ -394,6 +400,7 @@ function josue(car_id, user_id)//constructor
 		
 		}
 		
+		
 function showLoader()
 	{
 		//code here
@@ -426,7 +433,7 @@ function loading(id)//loading status
 		var txt = document.createTextNode('Loading...');
 		//var txt = '<img src="assets/loader/ajax-loader.gif" width="32" height="32" />';
 		var img = document.createElement("img");
-		img.setAttribute('src', 'http://45graphics.net/camera/ASSETS/loader/ajax-loader.gif');
+		img.setAttribute('src', 'https://www.45graphics.net/camera/ASSETS/loader/ajax-loader.gif');
 		img.setAttribute('width', '32');
 		img.setAttribute('height', '32');
 		
@@ -437,6 +444,7 @@ function loading(id)//loading status
 		p.appendChild(txt);
 		}	
 //needs work!!!
+
 function removeList()
 	{
 			//alert('it works');
@@ -455,6 +463,7 @@ function removeList()
 						}
 		 }
 		}
+		
 //needs work!!!
 function moveIcons(id)
 	{
@@ -467,47 +476,69 @@ function moveIcons(id)
 function show(id)
 	{
 			//hideHome();
-			var x = document.getElementById(id);
-			x.style.display = 'block';
-			x.style.height = 'auto';
-			
+			var x = "";
+				x = document.getElementById(id);
+				if(x.style.display == "none"){
+					//alert(x.id+"--"+x.style.display);
+				x.style.display = 'block';
+				
+				x.style.height = 'auto';
+				}else{
+					//alert(x.id+"--"+x.style.display);
+					x.style.display = 'block';
+					}
 		}
 		
-		
+
 //displays the my inventory link if cookie is available	
 function displayItem() //nothing here
 	{
 		var userA = localStorage.getItem('userIdCar');
 		if(userA){
-		var ho = document.getElementById('ho');
-		console.log('There is a cookie available with value of: '+ userA);
-		var div = document.createElement('div');
-			div.setAttribute('id', 'h');
-		var a = document.createElement('a');
-		var img = document.createElement('img');
-			img.setAttribute('src','http://45graphics.net/camera/ASSETS/icons/Android_notepad-download-letter_33.png');
-			img.setAttribute('width', '80');
-			img.setAttribute('height', '89');
+			var ho = document.getElementById('ho');
+				console.log('There is a cookie available with value of: '+ userA);
+			var div = document.createElement('div');
+				div.setAttribute('id', 'h');
+			var a = document.createElement('a');
+			var img = document.createElement('img');
+				img.setAttribute('src','https://www.45graphics.net/camera/ASSETS/icons/Android_notepad-download-letter_33.png');
+				img.setAttribute('width', '80');
+				img.setAttribute('height', '89');
 		
-		//span
-		var span = document.createElement("span");
+			//span
+			var span = document.createElement("span");
 		
-		var text = document.createTextNode('MY INVENTORY');
-			a.setAttribute('href', 'pages/my-car-inventory.html?userId='+ escape(userA));
-			div.appendChild(a);
-			a.appendChild(img);
+			var text = document.createTextNode('MY INVENTORY');
+				a.setAttribute('href', 'pages/my-car-inventory.html?userId='+ escape(userA));
+				div.appendChild(a);
+				a.appendChild(img);
 			
-			span.appendChild(text);
-			div.appendChild(span);
-		var place = document.getElementById('c');
-			ho.insertBefore(div,place);
+				span.appendChild(text);
+				div.appendChild(span);
+			var place = document.getElementById('c');
+				ho.insertBefore(div,place);
+				//hide the #c if there is a
+				hide('c');
+				show('g');
+				show("h");
+		
+			}else{
 			
-			hide('c');
-			show('g');
-		}else{
-			hide('g')
-			console.warn('Line 488: There is no cookie available!');
-			}
+				hide("h");
+				//fix this
+				hide("minA");
+				hide("g");
+				show("c");
+				
+//				var 	year = new Date();
+	//year = 	year.getFullYear();
+
+
+				document.getElementById("footer").innerHTML = "<h3>SaleCarro</h3>";//+ year;
+				//byId("footer").innerHTML = "Salecarro";
+				
+				console.warn('Line 488: There is no cookie available!');
+			}  
 }
 		
 		
@@ -525,7 +556,6 @@ function GoBack(id)
 				hide(target); hide('uploadCar');
 				hide('carDealers');
 				
-				
 		}
 		
 function takeMeBack(old, current)
@@ -539,14 +569,18 @@ function takeMeBack(old, current)
 		
 function hide(id)
 	{
-			var x = document.getElementById(id);
+			var x = "";
+				x = document.getElementById(id);
+				
+				if(x){
+				//alert(x);
 				x.style.display = 'none';
 				x.style.height = 'auto';
-				x.innerHTML = '';
+				//x.innerHTML = '';
 				console.log('hide function() ran.');
-				//clearAll();
+				}
 		}
-		
+		 
 function clearAll()
 	{
 		var x = document.getElementById('test');
@@ -596,13 +630,21 @@ function clearSession()//this function will remove the session html 5 baby
 		var con;
 		con = confirm('Log out of app?');
 		if(con){
-		localStorage.clear();
-		document.location.reload(true);
-		
+						localStorage.clear();
+						displayItem();
+						
+						
+		//document.location.reload(true);
 	}else{
+		
 		//nothig happens
 	}
 }
+function createLogInBtn(){
+	
+	//<div id="c"><a href="#" onClick="getPage('users.php', 'test'); return false"><img src="ASSETS/icons/Android_notepad-download-letter_21.png"></a><span>LOG-IN</span></div>
+	
+	}
 
 function setItems()
 	{
@@ -637,33 +679,39 @@ function animateThis()//animateThis call animate() and animates up
 	var x = $$('test');
 		console.log(x.offsetHeight);
 		console.log(x.offsetWidth);
-		this.a = setInterval('animate()',5);
+		this.areatohide = setInterval('animate()',20);
 		}
+
+var anumberbaby = 50;
 
 function animate()//animate needs work
 	{
 		
 	x = document.getElementById('test');
-	var d=x.offsetHeight;
 
-		if(x.offsetHeight <= 500){
-		d--;
-		}
 		
-		if(x.offsetHeight <= 3){
-			clearInterval(this.a);
+	//var d = x.style.height;
+	var f = x.offsetHeight;
+console.log("---------the current height is = "+ f);
+		//if(anumberbaby <= 500){
+		anumberbaby--;
+		//}
+		
+		if(anumberbaby <= 3){
+			clearInterval(this.areatohide);
 			hide('test');
 			}
 		
-		x.style.height = Math.round(d)-2 +'px';
 		
-		console.log('running animate function' + x.offsetHeight);	
+		x.style.height = Math.round(anumberbaby)+'px !important';
+		
+		console.log('running animate function' + anumberbaby);	
 		}
 	
 function dayOrNight()//needs work!!	
 	{
 		//d = new Date();
-		//console.log('Its this time now: '+ d.getHours() + ' hours');
+		//console.log('-------------------------------Its this time now: '+ d.getHours() + ' hours');
 		}
 		
 function Year()
@@ -708,6 +756,20 @@ console.log(navigator.camera);
 		//alert('its ready');
 		
     }
+	
+function okPush(){
+	
+	var r = "";
+	r = new XMLHttpRequest();
+		var url = "http://www.salecarro.com/api/api1.php";
+		r.open("GET", url, true);
+		r.onreadystatechange = function(){
+		if (r.readyState == 4 && r.status == 200)
+		{}
+		
+		}
+		r.send();
+	}
 
 function onPhotoDataSuccess(FILE_URI) { // Called when a photo is successfully retrieved
     // Uncomment to view the base64 encoded image data
@@ -716,13 +778,16 @@ function onPhotoDataSuccess(FILE_URI) { // Called when a photo is successfully r
 		//this.imageData = imageData;
 		//this.FILE_URI = FILE_URI;
 	
+	
+//okPush();	
+	
 	 
 	   console.log("Picture created succefully.");
 	//var E = document.getElementById('error');
 		
       // Get image handle
       //
-	  show('test')
+	  show('test');
       var smallImage = document.getElementById('smallImage');
 
       // Unhide image elements
@@ -750,7 +815,7 @@ function imageLoaded()//image loaded will display after image loaded
 			x.appendChild(green);
 			green.appendChild(text);
 			green.setAttribute('class', 'green');
-			show('test')
+			show('test');
 			clearAll();//line 500
 			setTimeout("animateThis()",5000);
 		}
@@ -938,7 +1003,7 @@ function populateCarEdit(id_car)
 		r = new XMLHttpRequest();
 		
 		if(navigator.platform != 'Win32'){
-				var url = 'http://45graphics.net/camera/pages/';
+				var url = 'https://www.45graphics.net/camera/pages/';
 					url += 'car-edit-info.php';
 					url += '?id_car='+escape(id_car);	
 				}else{
@@ -1038,6 +1103,25 @@ function extraPicture(id)
 dayOrNight();
 setTimeout("setFooter()", 500);
 
+
+var config = {
+	
+	byId: function(x){
+		return document.getElementById(x);
+		},
+	
+displayNumber: function(){
+		
+		
+		if(config.byId("beta")){
+					config.byId("beta").innerHTML = serialNumber;
+					}
+		
+		}
+}
+		
+var serialNumber = "1.0.22";
+config.displayNumber();
 
 //var setUp = 
 

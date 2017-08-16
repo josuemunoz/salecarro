@@ -221,6 +221,12 @@ h3{ font-family:sans-serif; text-align:center; font-size:12px; color:#CCC;}
 #goHome{ clear: both; float: left; margin-left: 0; width: 100%; display: block;}
 
 #make1{ clear: both; float: left; margin-left: 0; width: 100%; display: block;}
+
+#raydream2{ clear: both; float: left; margin-left: 0; width: 100%; display: block;}
+
+#page_title{ clear: both; float: left; margin-left: 0; width: 100%; display: block;}
+
+#boxA{ clear: both; float: left; margin-left: 0; width: 100%; display: block;}
 @media only screen and (min-width: 481px) {
 	.test li{ width:50%; height:auto; float:left; text-align:left; padding:5px 0px; text-indent:10px; list-style-type:none; position:relative;}
 	.beta{ font-family:sans-serif; font-size:1.4em; color:#F00; position:absolute; top:20px; right:20px;}
@@ -403,7 +409,7 @@ background-color:#FFF; padding:5px 0px; text-shadow:1px 2px #333333;
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 100%;
+	width: 36.464%;
 	display: block;
 }
 
@@ -416,6 +422,30 @@ background-color:#FFF; padding:5px 0px; text-shadow:1px 2px #333333;
 }
 
 #make1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#raydream2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#page_title {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#boxA {
 	clear: both;
 	float: left;
 	margin-left: 0;
@@ -617,6 +647,30 @@ background-color:#FFF; padding:5px 0px; text-shadow:1px 2px #333333;
 }
 
 #make1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#raydream2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#page_title {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#boxA {
 	clear: both;
 	float: left;
 	margin-left: 0;

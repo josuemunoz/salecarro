@@ -5,9 +5,11 @@ background:linear-gradient( #09F, #336699);
 background:-webkit-linear-gradient( #09F, #336699);
 
 border-radius:5px;
-
+ 
 }
 
+.onehundred{ width:100%; padding:0px; margin:0px;}
+#closeBox{ margin: 0 auto; height:80%; display:block; text-align:center; font-family:Verdana, Geneva, sans-serif; font-size:6em; padding-top:30px;}
 img.borderwhite{ border-radius:14px !important; margin:0px !important; padding:0px !important;}
 #call{ margin-left:10px;}
 li#left{ color:#000 !important; float:left !important; text-align:left; padding:4%; width:92%; line-height:25px; font-family:"Arial Black", Gadget, sans-serif; font-size:1em; overflow:hidden;}
@@ -47,16 +49,24 @@ border-radius: 10px;}
 <!--  fix this -->
 .bbbutton{ width:auto; height:50px;  padding:5px; float:left; font-family:Verdana, Geneva, sans-serif; font-size:1.2em; color:black;}
 .title {font-family:Arial, Helvetica, sans-serif;}
-.big{ font-size:2em; padding:10px;}
+.big{ font-size:2em; padding:10px 0;}
+.white{ color:#FFF;}
 #boxA{ padding:0px; margin:0px; float:left;}
 #boxA{ background-color:#CCC; border-radius:20px; width:100%; padding:10px 0; margin:20px 0; height:auto; display:block;}
 #boxA label{width:100%; text-indent:20px; display:block; margin:auto; color:#333; padding:5px 0; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#666;}
-#boxA input{ font-family:Verdana, Geneva, sans-serif; font-size:1.4em; font-stretch:ultra-condensed; background-color:#FFF; color:#333; border-bottom:1px solid red; border-radius:5px; width:90%; margin: 0 5%; padding:10px 0 10px 0px; text-indent:10px; text-align:left; border:none; display:block;}
+#boxA input, #boxA textarea{ font-family:Verdana, Geneva, sans-serif; font-size:1.4em; font-stretch:ultra-condensed; background-color:#FFF; color:#333; border-bottom:1px solid red; border-radius:5px; width:90%; margin: 0 5%; padding:10px 0 10px 0px; text-indent:10px; text-align:left; border:none; display:block;}
+
 #boxA input[type=tel]{}
+::-webkit-input-placeholder{ text-indent:10px;}
+
 #boxA input[type=button] { color:#fff; float:right; width:auto; padding:10px; margin:20px; background-color:#03F !important;}
 
-#bar{ width:80%; z-index:2; height:100%; background-color:#03F; color:#FFF; display:none; position:fixed; overflow:auto; top:0; right:0; bottom:0; left:0; -webkit-overflow-scrolling: touch;}
-#barOverlay{width:20%; overflow:hidden; opacity:.8; z-index:3; height:100%; background-color:#039; color:#FFF; display:none; position:fixed; right:0;}
+#bar{ width:0%; overflow:hidden; z-index:2; height:100%; background-color:#03F; color:#FFF; display:block; position:fixed; overflow:auto; top:0; right:0; bottom:0; left:0; -webkit-overflow-scrolling: touch;}
+#bar li, #bar ul{ padding:0px; margin:0px;}
+#bar li:first-child{ margin-top:50px;}
+#bar li{ width:100%; height:50px; overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:1.3em; text-align:left; line-height:50px; text-indent: 20px;}
+#bar li:hover{ background-color:#333; transition:"background-color .4s linear 0s"}
+#barOverlay{width:0%; overflow:hidden; opacity:.8; z-index:3; height:100%; background-color:#039; color:#FFF; display:block; position:fixed; right:0;}
 
 /*
 #edit, #delete, #addPictures, #sold, #test{ background: none repeat scroll 0 0 #FFFFFF;

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="../ASSETS/css/imports_css.css" rel="stylesheet" type="text/css">
+<link href="../ASSETS/css/2012.css" rel="stylesheet" type="text/css">
+<link href="../boilerplate.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="gridContainer clearfix">
+
+<div id="header">
+	 <div><a href="../index.html"><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></a></div>
+</div>
+
+ <div id="boxA">
+    <h1 class="big middle">Request Test Drive</h1>
+    <label>First name:</label>
+    	<input id="name" placeholder="first name" value="Josue">
+    <label>Last name:</label>
+    	<input id="last" placeholder="last name" value="Munoz">
+    <label>Email:</label>
+    	<input id="email" placeholder="email@email.com" value="josue619@hotmail.com">
+    <label>Phone number:ex(6191234567)</label>
+    	<input type="number" id="phone" placeholder="6193169904" value="6193169904">
+    <label>Time:</label>
+    	<input id="time" type="time">
+    <label>Date:</label>
+    	<input id="date" type="date">
+    <label>Make:</label>
+    	<input id="make" placeholder="make">
+    <label>Model:</label>
+    	<input id="model" placeholder="model">
+    <label>Year:</label>
+    	<input id="year" placeholder="2017">
+        <input id="salesperson" name="salesperson" type="hidden" value="">
+    <label>Notes:</label>
+    	<textarea id="notes"></textarea>
+    <label>Picture of your California ID:</label>
+    	<input id="file" type="file">
+	<label></label>
+   <input id"rtdbtn" name="" onClick="carAPI.getInputData('boxA');" type="button" value="SEND INFORMATION" >
+    
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>
+<script src="../javascript/jm.js"></script>
+
+<script language="javascript">
+var obj = JSON.parse(localStorage.getItem("carData"));
+//alert(obj.salesperson);
+var test = {
+	
+	byId: function(x){
+		
+		return document.getElementById(x);
+		
+		},
+		
+	
+	
+	}
+test.byId("make").value = obj.make;
+test.byId("model").value = obj.model;
+test.byId("year").value = obj.year;
+test.byId("salesperson").value = obj.salesperson;
+
+</script>
+

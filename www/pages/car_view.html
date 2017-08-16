@@ -33,13 +33,15 @@ Do the following if you're using your customized build of modernizr (http://www.
 </head>
 
 <body>
-
+<style>
+ .bt{ padding:10px; background:linear-gradient(#09C, #09F); text-shadow:1px 2px 2px #333; width:80%; margin:auto; clear:both; border-radius:10px; color:#FFF;}
+</style>
   <div id="header">
   	<div class="beta">1.0.19</div>
     <div><img src="../ASSETS/logo/Android_notepad-download-letter11_12.png"></div>
    		<div class="goHome"><a onClick="window.history.go(-1)">Go Back</a></div>
         <div class="goHome" id="call">Call Today!</div>
-        
+        <div class="goHome" id="testdrive" onClick="carAPI.requestAtestDrive()">Request Drive</div>
            <div id="inventory" class="myTarget">
                 <!-- loader -->
                 <div class="loader" id="loader"><img src="../ASSETS/loader/ajax-loader.gif" alt="loading logo"><br/>Loading...</div>

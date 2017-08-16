@@ -121,6 +121,7 @@ var carApp = {
 			if(ajax.readyState == 4 && ajax.status == 200){
 				
 				var data = JSON.parse(ajax.responseText);
+				localStorage.setItem("carData", ajax.responseText);
 					//alert("the price is " + data['price']);
 					var target = document.getElementById("inventory");
 						//clear the view
@@ -250,7 +251,6 @@ var carApp = {
 				ul.appendChild(li);
 				
 		}
-		
 }
 
 
@@ -260,6 +260,13 @@ carAPI = {
 	byId: function(x){
 		return document.getElementById(x);
 		},
+	byName: function(xx){
+		return document.getElementsByClassName(xx);
+		
+		},
+	byTagName: function(thetagname){
+		return document.getElementsByTagName(thetagname);
+		},
 	
 	displayIfLoggedIn: function(){
 		
@@ -267,11 +274,53 @@ carAPI = {
 		var b = carAPI.byId("minA");
 		//<a href="pages/my-account.html">Account settings</a>
 		var a = document.createElement("a");
-			a.setAttribute("href", "pages/my-account.html");
-			a.innerHTML = "Account Settings";
+			
+			//carAPI.barOverlay()
+			a.onclick = carAPI.barOverlay;
+			a.setAttribute("class", "goHome onehundred middle");
+			//a.setAttribute("href", "pages/my-account.html");
+			a.innerHTML = "My Account";
 			b.appendChild(a);
 		
 		
+		},
+	
+	
+	getInputData: function(){
+		var input, textarea;
+		var formdata =  new FormData();
+			input =  carAPI.byTagName("input");
+			textarea = carAPI.byTagName("textarea");
+			
+			//alert(input.length);
+			
+			if(textarea){
+				
+				for(var keyy in textarea){
+				formdata.append(textarea[keyy].id, textarea[keyy].value);
+				}
+				}
+			
+			if(input){
+				formdata.append("module", "requestTestDrive");
+				//formdata.append("", input.files[0]);		
+				for(var key in input){
+					//if(input[key].id != "" || inputs[key].value != ""){
+						if(input[key].id == 'file'){
+						formdata.append("file", input[key].files[0]);
+						}else{
+							
+							console.log("id: " +input[key].id+ "-- The value: "+input[key].value);
+						formdata.append(input[key].id, input[key].value);
+							}
+					//}
+				}
+				
+				
+				
+			}
+				//alert("hello");
+				carAPI.theRequestB(formdata);
 		},
 	
 	getUserData: function(){
@@ -343,24 +392,166 @@ carAPI = {
 			
 			
 		},
+		
+	recoverPassword: function(){
+		
+		var x = prompt("Please provide email?","");
+			if(x == null || x == ""){
+				
+				alert("Email was not provided.");
+				
+				}else{
+					
+					
+						carAPI.email = x;
+						carAPI.theRequest();
+					}
+		},
+		
+	accountSettings: function(){
+		
+		//alert(event.target.id);
+		window.location.assign("pages/my-account.html");
+		
+		},
+	changePassword: function(){
+		window.location.assign("pages/my-account.html");
+		
+		},
+	
+	editInventory: function(){
+		
+		alert("working on this");
+		
+		},
+	requestAtestDrive: function(){
+		
+		//alert(window.location);
+		//var obj = JSON.parse(localStorage.getItem("carData"));
+		//var obj = localStorage.getItem("carData");
+		//alert(obj.make);
+		
+		window.location.assign("requesttestdrive.html");
+		
+		},
+		
+//////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+	theRequest: function(){
+		
+			//var x = "";
+				var x = new XMLHttpRequest();
+				var formdata = new FormData();
+				
+				//variables to pass
+				formdata.append("module", "recoverPassword");
+				formdata.append("email", carAPI.email);
+				//formdata.append("theid", localStorage.getItem('registrationId'));
+				console.log(formdata+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+				x.open("POST", "http://www.salecarro.com/api/api1.php", true);
+				x.send(formdata);
+				
+				//x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				x.onreadystatechange = function(){
+						if(x.readyState == 4 && x.status == 200){
+							var d = JSON.parse(x.responseText);
+								alert(d.status);
+						}
+				}
+		
+			
+			
+		
+		},
+		
+	theRequestB: function(data){
+		
+				var x = "";
+				x = new XMLHttpRequest();
+				//var formdata = new FormData();
+				//alert(data);
+				//variables to pass
+				//formdata.append("module", "");
+				console.log(data+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+				x.open("POST", "http://www.salecarro.com/api/api1.php", true);
+				x.send(data);
+				
+				//x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				x.onreadystatechange = function(){
+						if(x.readyState == 4 && x.status == 200){
+							var d = JSON.parse(x.responseText);
+								alert(d.status);
+								history.back();
+						}
+				}
+		
+			
+			
+		
+		},
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+	setEventsForBar: function(){
+	
+	var x = this.byId("bar");
+		var li = x.getElementsByTagName("li");
+		
+			x.addEventListener("click", function(){
+				
+				if(event.target.id){
+					
+					
+					var str = event.target.id;
+						f = String(str);
+						//alert(str);
+					eval("carAPI."+f+"()");
+					
+					
+					}
+				
+				
+				});
+		//alert(li.length);
+		
+	
+	},
+	
 	
 	barOverlay: function(){
 		
-		
-		
-			window.addEventListener("touchstart", function(event){
+				var overlay, bar, w, closeBox;
 				
-				var overlay = carAPI.byId('barOverlay');
-				var bar = carAPI.byId('bar');
-					if(event.target.id == overlay.id){
+					overlay = carAPI.byId('barOverlay');
+					bar = carAPI.byId('bar');
+					closeBox = carAPI.byId("closeBox");
+					
+					overlay.style.width = "20%";
+					//bar.style.display = "block";
+					overlay.style.transition = "width .4s linear 0s";
+					bar.style.width = "80%";
+					//bar.style.display = "block";
+					bar.style.transition = "width .4s linear 0s";
+				
+				//alert(event.type);
+				
+			closeBox.addEventListener("click", function(event){
+	
 						
+		//alert(event.type);	
+					
+				
+					 
+					if(event.target.id == closeBox.id){
+				
+						if(bar.style.width == "80%"){
 						bar.style.width = "0%";
 						bar.style.transition = "width .4s linear 0s";
 						overlay.style.width = "0%";
 						overlay.style.transition = "width .3s linear 0s";
-						console.log(event.target.id);
+						console.log(event.target.id+" "+ bar.style.width+ "++++++++++++++++++++++");
 						
 						}
+							}
 				
 				});
 		
@@ -371,10 +562,16 @@ carAPI = {
 	}
 	
 	
+//document.addEventListener("deviceready", function(){
+	
+	//alert('ok');
 if(localStorage.getItem("userIdCar")){
 carAPI.displayIfLoggedIn();
+carAPI.setEventsForBar();
 }
-//carAPI.barOverlay();
+// carAPI.barOverlay();
+//}, false);
+
 
 
 var pn = {
@@ -493,3 +690,4 @@ var pn = {
     }
 };
 pn.initialize();
+
